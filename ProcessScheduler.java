@@ -1,3 +1,6 @@
+import scheduler.processing.ArithmeticProcess;
+import scheduler.scheduling.policies.FCFS;
+
 public class ProcessScheduler {
   public static void main(String[] args) {
     String politics = args[0];
@@ -8,7 +11,14 @@ public class ProcessScheduler {
 
     switch (politics.substring(1)) {
       case "fcfs":
-        System.out.println("Policy fcfs");
+        ArithmeticProcess p = new ArithmeticProcess(1);
+        ArithmeticProcess p2 = new ArithmeticProcess(2);
+        ArithmeticProcess p3 = new ArithmeticProcess(3);
+        FCFS fcfs = new FCFS();
+        fcfs.add(p);
+        fcfs.add(p2);
+        fcfs.add(p3);
+        fcfs.remove();
         break;
       case "lcfs":
         System.out.println("Policy lcfs");
