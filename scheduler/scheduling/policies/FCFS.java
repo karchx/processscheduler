@@ -9,15 +9,12 @@ public class FCFS extends Policy {
 
   @Override
   public void add(SimpleProcess p) {
-    System.out.println("Insert process ArithmeticProcess: " + p.getId());
     this.process.add(p);
-    System.out.println("Insert process ArithmeticProcess stack: " + this.process.toString());
   }
 
   @Override
   public void remove() {
-    SimpleProcess removed = this.process.peek();
-    System.out.println("Se removio: " + removed.toString());
+   this.process.remove();
   }
 
   @Override

@@ -19,6 +19,7 @@ public class ProcessScheduler {
         fcfs.add(p2);
         fcfs.add(p3);
         fcfs.remove();
+        System.out.println(fcfs.toString());
         break;
       case "lcfs":
         System.out.println("Policy lcfs");
