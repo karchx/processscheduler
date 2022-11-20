@@ -1,8 +1,17 @@
 package scheduler.processing;
 
 public class ArithmeticProcess extends SimpleProcess {
+  private int time = 300;
+
   public ArithmeticProcess(int id) {
     super(id);
-    System.out.println("ArithmeticProcess pid: " + id);
+  }
+
+  public String toString() {
+    return "A " + super.toString();
+  }
+
+  public int getTime() {
+    return this.time;
   }
 }
